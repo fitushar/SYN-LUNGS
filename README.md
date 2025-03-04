@@ -68,7 +68,7 @@ The performance of the models was evaluated using the Free-Response Receiver Ope
 
 ## Task: Segmenation
 
-Utilized the Vists3D
+We utilized [Vista3D](https://github.com/Project-MONAI/VISTA/tree/main/vista3d) and [nnUNetV2](https://github.com/MIC-DKFZ/nnUNet/tree/master) for segmentation tasks. Vista3D was fine-tuned using the MSD Task06 dataset, leveraging its pretrained weights for better generalization. Meanwhile, nnUNetV2 was trained from scratch on the same dataset to evaluate performance without transfer learning. Models trained with SYN-LUNGS data significantly improved segmentation accuracy, particularly for small nodules. Dice score improvements ranged from 2-9%, demonstrating enhanced generalization when incorporating simulated data.
 
 ## Task: Classification
 
