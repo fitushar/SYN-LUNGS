@@ -79,3 +79,10 @@ Utilized the Vists3D
 
 
 ## Task: Targeted Synthetsis
+
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+For inquiries, please reach out to Fakrul Islam Tushar at tushar.ece@duke.edu
