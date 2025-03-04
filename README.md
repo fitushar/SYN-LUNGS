@@ -2,14 +2,7 @@
 
 **Abstract:** AI models for lung cancer screening struggle with data scarcity, limiting generalizability and clinical applicability. Generative models for image synthesis are constrained by training data variability. We introduce SYN-LUNGS, a framework for generating high-quality 3D CT images with detailed annotations. SYN-LUNGS integrates XCAT3 phantoms for digital twin generation, X-Lesions for nodule simulation (varying size, location, appearance), and DukeSim for CT image formation with vendor and parameter variability. The dataset includes **3,072** nodule images from **1,044** simulated CT scans, **512** lesions, and **174** digital twins. Effectiveness was shown for nodule detection, segmentation, cancer classification, and synthesis. Models trained on clinical + simulated data outperform clinical-only models, with **10%** improvement in detection, **2–9%** in segmentation, **2–9%** in classification and enhanced synthesis. By integrating anatomy-informed simulations, this work facilitates future AI model development such as for rare disease representation and model reliability.
 
-**Results**:
-* Detection: 10% improvement over clinical-only models
-* Segmentation: 2–9% improvement in Dice scores
-* Classification: AUC improved by 2–9%
-* Synthesis: Enhanced control over nodule type and size
-
 **Citation**
-If you use SYN-LUNGS in your research, please cite:
 ```ruby
 @article{tushar2025synlungs,
   title={SYN-LUNGS: Towards Simulating Lung Nodules with Anatomy-Informed Digital Twins for AI Training},
@@ -18,19 +11,27 @@ If you use SYN-LUNGS in your research, please cite:
   year={2025}
 }
 ```
-
-
 ## Features
-
 **Digital Human Twins:** Generated from XCAT3 phantoms, embedding anatomical, pathological, and demographic variations.
-
 **Simulated Lung Nodules:** Controlled lesion characteristics in terms of size, shape, and texture using X-Lesions.
-
 **Physics-Based CT Simulation:** Modeled using DukeSim for scanner-specific imaging variations.
-
 **AI Model Training Enhancement:** Validated on multiple AI tasks including nodule detection, segmentation, classification, and synthesis.
-
 **Statistical Labeling:** Malignancy assignment based on a logistic regression model trained on NLST dataset.
+
+
+# Simulated and Clinical Dataset
+## The SYN-LUNGS dataset consists of:
+* 1,044 CT scans from 174 digital twins
+* 512 simulated lung nodules with segmentation masks
+* 3,072 nodule images across different scanners
+
+**The dataset can be accessed at:** [CVIT Duke Resources](https://cvit.duke.edu/resources/)
+
+## Clinical Dataset
+* Duke Lung Cancer Screening Dataset : https://zenodo.org/records/13799069
+* LUNA16: https://luna16.grand-challenge.org/
+* MSD Task06: http://medicaldecathlon.com/
+
 
 ## Installation
 
@@ -48,12 +49,6 @@ Prerequisites. Ensure the following dependencies are installed:
 
 
 
-
-# Simulated and Clinical Dataset
-* [1]SYN-LUNGS: Can be requested through, https://cvit.duke.edu/resources/
-* [2] Duke Lung Cancer Screening Dataset : https://zenodo.org/records/13799069
-* [3] LUNA16: https://luna16.grand-challenge.org/
-* [4] MSD Task06: http://medicaldecathlon.com/
 
 Coming soon!!!
 1) Training scripts
